@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sesha's Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              back: '#D9D9D9',
+              title: '#404040',
+              light: '#757575',
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/css">
+      body {
+        font-family: 'Jost', sans-serif;
+      }
+    </style>
+    <style type="text/tailwindcss">
+      .side-title {
+        @apply bg-back w-60 h-12 text-xl font-medium flex items-center pl-[40px];
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        /* Print screen setting */
+        @apply print:text-lg;
+      }
+
+      .pill {
+        @apply bg-back px-2 rounded-md mr-6;
+
+        /* Print screen setting */
+        @apply print:text-[10px] print:mr-2;
+      }
+
+      li {
+        @apply my-3;
+      }
+
+      .wrapper {
+        @apply mx-10 my-6;
+      }
+
+      .section {
+        @apply my-8;
+      }
+
+      .summary {
+        @apply mx-10 my-8 text-base;
+
+        /* Print screen setting */
+        @apply print:text-xs print:my-4;
+      }
+
+      .overall-skills {
+        @apply flex flex-wrap mx-10 gap-y-4 my-8;
+
+        /* Print screen setting */
+        @apply print:gap-y-4 print:my-6;
+      }
+
+      .information {
+        @apply flex justify-between mx-10 items-center text-title;
+
+        /* Print screen setting */
+      }
+
+      .information > .name {
+        @apply flex flex-col gap-y-2 font-medium;
+
+        /* Print screen setting */
+        @apply print:gap-y-0;
+      }
+
+      .information > .name > .title {
+        @apply text-4xl font-medium;
+
+        /* Print screen setting */
+        @apply print:text-2xl;
+      }
+
+      .information > .name > .sub-title {
+        @apply text-xl font-medium;
+
+        /* Print screen setting */
+        @apply print:text-base;
+      }
+
+      .information > .contact {
+        @apply flex flex-col gap-y-1 text-right text-sm;
+        font-family: 'DM Sans', sans-serif;
+
+        /* Print screen setting */
+        @apply print:text-[10px] print:gap-y-0;
+      }
+
+      .item-container {
+        @apply grid grid-cols-[1fr_3fr] mb-8;
+
+        /* Print screen setting */
+        @apply print:mb-4 print:gap-x-2;
+      }
+
+      .item-container > .left > .title {
+        @apply font-medium text-xl px-1;
+
+        /* Print screen setting */
+        @apply print:text-base px-0;
+      }
+
+      .item-container > .left > .sub-title {
+        @apply italic text-base text-light px-1;
+
+        /* Print screen setting */
+        @apply print:text-xs;
+      }
+
+      .item-container > .right > .skills {
+        @apply flex flex-wrap gap-y-4;
+
+        /* Print screen setting */
+        @apply print:gap-y-2;
+      }
+
+      .item-container > .right > ul {
+        @apply mt-8 list-disc list-inside;
+
+        /* Print screen setting */
+        @apply print:mt-4;
+      }
+
+      .item-container > .right > ul > li {
+        @apply print:text-sm print:mb-4;
+      }
+
+      .item-container > .right > .description {
+        @apply mb-2;
+
+        /* Print screen setting */
+        @apply print:text-sm print:mb-1;
+      }
+
+      .item-container > .right > .duration {
+        @apply italic text-light;
+
+        /* Print screen setting */
+        @apply print:text-sm;
+      }
+
+      .language-list {
+        @apply flex justify-between gap-x-4 my-8 mx-10 w-1/2;
+      }
+    </style>
+  </head>
+
+  <body class="section">
+    <!-- Name and contact information -->
+    <div class="information">
+      <!-- Name and Title -->
+      <div class="name">
+        <div class="title">Seshathri</div>
+        <div class="sub-title">Software Developer</div>
+      </div>
+      <!-- Contact details -->
+      <div class="contact">
+        <div>seshathri1994@gmail.com</div>
+        <div>+91 7358101613</div>
+        <div><a class="underline" href="https://linkedin.com/in/spsesha">https://linkedin.com/in/spsesha</a></div>
+      </div>
+    </div>
+
+    <!-- Summary  -->
+    <div class="summary">
+      Skilled full-stack developer with 8 years of experience in building and optimizing web applications using Node.js,
+      Angular, Express and PostgreSQL, with expertise in AWS and Azure cloud platforms. Proven ability in leading teams,
+      implementing automation to enhance productivity, reduce manual work, optimizing system performance and enhance
+      security. Passionate about leveraging new technologies and continuously improving application with new learnings
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+      <div class="side-title">Skills</div>
+      <div class="overall-skills">
+        <div class="pill">Node.js</div>
+        <div class="pill">Angular</div>
+        <div class="pill">PostgreSQL</div>
+        <div class="pill">MongoDB</div>
+        <div class="pill">Express</div>
+        <div class="pill">Python</div>
+        <div class="pill">React</div>
+        <div class="pill">AWS</div>
+        <div class="pill">Prisma</div>
+        <div class="pill">Nest.js</div>
+        <div class="pill">Azure</div>
+        <div class="pill">Tailwind CSS</div>
+        <div class="pill">Electron</div>
+        <div class="pill">Next.js</div>
+        <div class="pill">BullMQ</div>
+        <div class="pill">Microservice</div>
+        <div class="pill">MQTT</div>
+        <div class="pill">Arduino</div>
+        <div class="pill">Raspberry Pi</div>
+        <div class="pill">RabbitMQ</div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <div class="side-title">Experience</div>
+
+      <div class="wrapper">
+        <!-- Flydocs -->
+        <div class="item-container">
+          <div class="left">
+            <div class="title">Flydocs India</div>
+            <div class="sub-title">Nov 2022 - Present</div>
+          </div>
+          <div class="right">
+            <div class="skills">
+              <div class="pill">Nest.js</div>
+              <div class="pill">Angular</div>
+              <div class="pill">PostgreSQL</div>
+              <div class="pill">MongoDB</div>
+              <div class="pill">Python</div>
+              <div class="pill">Azure</div>
+              <div class="pill">BullMQ</div>
+              <div class="pill">Microservice</div>
+            </div>
+            <ul>
+              <li>
+                Working in the tech revamp project where we are migrating the classic system to Angular-Nest.js stack
+              </li>
+              <li>
+                As part of security measure, implemented Azure KeyVault in replacement of legacy env based variables for
+                database and other service credentials
+              </li>
+              <li>Optimized the docker build image to improve the build speed and reduce layer size</li>
+              <li>Explored multiple barcode libraries and implemented the optimal solution</li>
+              <li>
+                Did R&D on Azure Document Intelligence to improve OCR accuracy and implemented the solution to
+                production which reduced manual correction of OCR data post processing
+              </li>
+              <li>
+                Created a script which identifies incorrectly generated document preview (color corrected) and replaced
+                them with improved ones, removing manual effort to identify and generate preview files for more than 1+
+                years of data
+              </li>
+              <li>
+                Created an adhoc script for a migration mapping which reduced the execution and turn around time to
+                respond to client
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Element5 -->
+        <div class="item-container print:mt-8">
+          <div class="left">
+            <div class="title">Element5</div>
+            <div class="sub-title">Nov 2021 - Nov 2022</div>
+          </div>
+          <div class="right">
+            <div class="skills">
+              <div class="pill">Express</div>
+              <div class="pill">React</div>
+              <div class="pill">PostgreSQL</div>
+              <div class="pill">MongoDB</div>
+              <div class="pill">Python</div>
+              <div class="pill">AWS</div>
+            </div>
+            <ul>
+              <li>Worked in the platform development team, which focuses on the end-user product</li>
+              <li>
+                Implemented reporting system, which extracts large set of data for reporting and emailing user with
+                download link
+              </li>
+              <li>
+                Created an automation framework for internal systemm which reduces the development time of automation
+                workflow from weeks to days with minimal dev work
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- DXC Technology -->
+        <div class="item-container print:mt-36 print:pt-8">
+          <div class="left">
+            <div class="title">DXC Technology</div>
+            <div class="sub-title">Oct 2016 - Nov 2021</div>
+          </div>
+          <div class="right">
+            <div class="skills">
+              <div class="pill">Express</div>
+              <div class="pill">Angular</div>
+              <div class="pill">PostgreSQL</div>
+              <div class="pill">Python</div>
+              <div class="pill">AWS</div>
+            </div>
+            <ul>
+              <li>
+                Led a team of 4 for developing an access management system which includes provisioning and revoking
+                access, password resets to reduce manual efforts of support team
+              </li>
+              <li>
+                Worked as a solo contributor on an internal employee management system which manages projects and cost
+                management, build the app from scratch till production
+              </li>
+              <li>Worked on an end user web application that enables users to purchase/renew client products</li>
+              <li>
+                Automated a weekly report which summarizes the work done in the past week which reduces 35+ hours of
+                manual work per week
+              </li>
+              <li>
+                Created a tool which resend failed email automatically to the target server which reduced manual efforts
+                of support team resending 1500+ failed emails and reduces the turnaround time
+              </li>
+              <li>Earned multiple spot and champ award for exceptional delivery done</li>
+              <li>Conducted virtual workshops on Angular and Python</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Self-Initiated Projects -->
+    <div class="section print:-mt-4">
+      <div class="side-title">Self-Initiated Projects</div>
+
+      <div class="wrapper">
+        <!-- Finance Planner -->
+        <div class="item-container">
+          <div class="left">
+            <div class="title">Finance Manager</div>
+          </div>
+          <div class="right">
+            <div class="description">A Simple app for managing personal finance</div>
+            <div class="skills">
+              <div class="pill">Next.js</div>
+              <div class="pill">React</div>
+              <div class="pill">Prisma</div>
+              <div class="pill">Tailwind CSS</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Point of Sale -->
+        <div class="item-container">
+          <div class="left">
+            <div class="title">Point of Sale</div>
+          </div>
+          <div class="right">
+            <div class="description">
+              A point of sale application for a restaurant which includes order management, price calculation and bill
+              generation
+            </div>
+            <div class="skills">
+              <div class="pill">Electron</div>
+              <div class="pill">Angular</div>
+              <div class="pill">PostgreSQL</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHCS -->
+        <div class="item-container">
+          <div class="left">
+            <div class="title">Smart Home Control System</div>
+          </div>
+          <div class="right">
+            <div class="description">A centralized control system for managing house-hold equipments</div>
+            <div class="skills">
+              <div class="pill">Arduino</div>
+              <div class="pill">Raspberry Pi</div>
+              <div class="pill">Python</div>
+              <div class="pill">MQTT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="side-title">Education</div>
+
+      <div class="wrapper">
+        <!-- B.E -->
+        <div class="item-container">
+          <div class="left">
+            <div class="title">Bachelor of Engineering (CSE)</div>
+          </div>
+          <div class="right">
+            <div class="description">Aalim Muhammed Salegh College of Engineering, Chennai</div>
+            <div class="duration">2011 - 2015</div>
+          </div>
+        </div>
+
+        <!-- GCDAI -->
+        <div class="item-container">
+          <div class="left">
+            <div class="title">Global Certificate in Data Science & AI</div>
+          </div>
+          <div class="right">
+            <div class="description">INSAID</div>
+            <div class="duration">2019</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="section">
+      <div class="side-title">Languages</div>
+      <div class="language-list">
+        <div>Tamil</div>
+        <div>English</div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
