@@ -31,18 +31,23 @@
     </style>
     <style type="text/tailwindcss">
       .side-title {
-        @apply bg-back w-60 h-12 text-xl font-medium flex items-center pl-[40px];
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        @apply bg-back w-60 h-12 text-xl font-medium flex items-center pl-[20px];
+
+        @apply md:pl-[40px];
 
         /* Print screen setting */
         @apply print:text-lg;
       }
 
       .pill {
-        @apply bg-back px-2 rounded-md mr-6;
+        @apply bg-back px-1 rounded-md text-sm;
+
+        @apply md:px-2 md:text-base;
 
         /* Print screen setting */
-        @apply print:text-[10px] print:mr-2;
+        @apply print:text-xs print:mr-2;
       }
 
       li {
@@ -50,35 +55,49 @@
       }
 
       .wrapper {
-        @apply mx-10 my-6;
+        @apply mx-4 my-6;
+
+        @apply md:mx-10;
       }
 
       .section {
-        @apply my-8;
+        @apply my-6;
+
+        @apply md:my-8;
+
+        @apply print:my-8;
       }
 
       .summary {
-        @apply mx-10 my-8 text-base;
+        @apply m-4 text-sm;
+
+        @apply md:mx-10 md:my-8 md:text-base;
 
         /* Print screen setting */
         @apply print:text-xs print:my-4;
       }
 
       .overall-skills {
-        @apply flex flex-wrap mx-10 gap-y-4 my-8;
+        @apply flex flex-wrap mx-4 gap-y-4 my-8 gap-x-2;
+
+        @apply md:mx-10 md:gap-x-3;
 
         /* Print screen setting */
-        @apply print:gap-y-4 print:my-6;
+        @apply print:gap-y-4 print:my-6 print:gap-x-0;
       }
 
       .information {
-        @apply flex justify-between mx-10 items-center text-title;
+        @apply flex flex-col mx-4 text-title gap-y-4;
+
+        @apply md:flex-row md:mx-10 md:justify-between md:items-center;
 
         /* Print screen setting */
       }
 
       .information > .name {
-        @apply flex flex-col gap-y-2 font-medium;
+        @apply flex flex-col gap-y-0 font-medium;
+
+        @apply md:gap-y-2;
 
         /* Print screen setting */
         @apply print:gap-y-0;
@@ -99,43 +118,61 @@
       }
 
       .information > .contact {
-        @apply flex flex-col gap-y-1 text-right text-sm;
         font-family: 'DM Sans', sans-serif;
+        @apply grid grid-cols-2 gap-y-2 text-xs;
+
+        @apply md:flex md:flex-col md:gap-y-1 md:text-right md:text-sm;
 
         /* Print screen setting */
         @apply print:text-[10px] print:gap-y-0;
       }
 
       .item-container {
-        @apply grid grid-cols-[1fr_3fr] mb-8;
+        @apply grid grid-cols-1 mb-6 gap-y-2 gap-x-2;
+
+        @apply md:grid-cols-[1fr_3fr] md:gap-y-4 md:mb-8;
 
         /* Print screen setting */
-        @apply print:mb-4 print:gap-x-2;
+        @apply print:mb-4 print:gap-x-2 print:gap-y-0;
+      }
+
+      .item-container > .left {
+        @apply flex justify-between items-center;
+
+        @apply md:flex-col md:justify-start md:items-start;
       }
 
       .item-container > .left > .title {
-        @apply font-medium text-xl px-1;
+        @apply font-medium text-lg px-1;
+
+        @apply md:text-xl;
 
         /* Print screen setting */
         @apply print:text-base px-0;
       }
 
       .item-container > .left > .sub-title {
-        @apply italic text-base text-light px-1;
+        @apply italic text-light text-sm;
+
+        @apply md:text-base;
 
         /* Print screen setting */
         @apply print:text-xs;
       }
 
       .item-container > .right > .skills {
-        @apply flex flex-wrap gap-y-4;
+        @apply flex flex-wrap gap-y-4 gap-x-2;
+
+        @apply md:gap-x-3;
 
         /* Print screen setting */
-        @apply print:gap-y-2;
+        @apply print:gap-y-2 print:gap-x-0;
       }
 
       .item-container > .right > ul {
-        @apply mt-8 list-disc list-inside;
+        @apply mt-4 list-disc list-inside ml-4 text-sm;
+
+        @apply md:mt-8 md:ml-0 md:text-base;
 
         /* Print screen setting */
         @apply print:mt-4;
@@ -146,14 +183,18 @@
       }
 
       .item-container > .right > .description {
-        @apply mb-2;
+        @apply mb-2 text-sm;
+
+        @apply md:text-base;
 
         /* Print screen setting */
         @apply print:text-sm print:mb-1;
       }
 
       .item-container > .right > .duration {
-        @apply italic text-light;
+        @apply italic text-light text-sm;
+
+        @apply md:text-base;
 
         /* Print screen setting */
         @apply print:text-sm;
@@ -176,8 +217,8 @@
       <!-- Contact details -->
       <div class="contact">
         <div>seshathri1994@gmail.com</div>
-        <div>+91 7358101613</div>
         <div><a class="underline" href="https://linkedin.com/in/spsesha">https://linkedin.com/in/spsesha</a></div>
+        <div>+91 7358101613</div>
       </div>
     </div>
 
